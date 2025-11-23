@@ -4,7 +4,7 @@ This project leverages deep learning for cloud removal in full-disk solar images
 
 **Title of the Article**: [DDU-Net: Learning Complex Vascular Topologies with  KAN-Swin Transformers and Double Dynamic Upsampler]
 
-![image]([https://github.com/user-attachments/assets/df9370c6-4862-4654-b445-f7fa0be70be8](https://github.com/steve706/DDUM_final/blob/f97cb0ecb2f3fb61736dd28fb1a76a68ab821a90/image.png))
+![image](https://github.com/steve706/DDUM_final/blob/f97cb0ecb2f3fb61736dd28fb1a76a68ab821a90/image.pn)
 ## Setup
 Project Clone to Local
 ```

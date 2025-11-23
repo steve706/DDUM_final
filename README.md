@@ -8,7 +8,7 @@ This project leverages deep learning for cloud removal in full-disk solar images
 ## Setup
 Project Clone to Local
 ```
-git clone https://github.com/steve706/full-disk-cloud-removal.git
+git clone https://github.com/steve706/DDUM_final.git
 ```
 To install dependencies:
 

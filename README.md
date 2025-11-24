@@ -1,10 +1,30 @@
 
 # DDU-Net: Learning Complex Vascular Topologies with  KAN-Swin Transformers and Double Dynamic Upsampler
-This project leverages deep learning for cloud removal in full-disk solar images, encompassing both datasets, model parameters and network structure. 
-
+This project leverages deep learning for segment complex vascular topologies in OCTA images, encompassing both datasets, model parameters and network structure. 
+We propose the KAN-Swin Transformer, an encoder block that replaces this rigid component with an adaptive operator based on Kolmogorov-Arnold Networks (KANs). This new layer features B-spline-based learnable activation functions on network edges, rather than fixed functions on nodes, empowering the encoder to learn geometrically-aware representations specific to intricate morphologies like bifurcations and high-tortuosity segments. The decoder features a novel dual-path Double Dynamic Upsampler Module (DDUM), which processes edge-rich shallow features and semantic deep features in parallel before an attention-based fusion, avoiding feature contamination. An Information Compensation Module (ICM) further recovers fine details using multi-dilation convolutions. For challenging low-contrast Inner Vascular Complex (IVC) images, we introduce a multimodal fusion strategy, where a Feature Alignment Module (FAM) aligns probability maps from auxiliary modalities to enhance the IVC representation.
 **Title of the Article**: [DDU-Net: Learning Complex Vascular Topologies with  KAN-Swin Transformers and Double Dynamic Upsampler]
 
 ![image](https://github.com/steve706/DDUM_final/blob/main/image.png)
+
+## 🏆 Key Innovations
+
+### 1\. KAN-Swin Transformer (The Core Innovation)
+
+Unlike traditional Transformers that rely on MLPs with fixed activations (e.g., GELU), our **KAN-Swin Transformer** utilizes **Kolmogorov-Arnold Networks**.
+
+  * **Learnable Activations:** Places learnable B-spline activation functions on edges.
+  * **Adaptive Topology:** The network *learns* the optimal non-linear function required to model complex vessel curvatures.
+
+### 2\. Double Dynamic Upsampler (DDUM)
+
+  * **Disentangled Decoding:** Splits decoding into a "Shallow Path" (for high-freq details) and a "Deep Path" (for semantic integrity).
+  * **Attention Fusion:** Dynamically fuses these paths only at the final stage to prevent feature contamination.
+
+### 3\. Multimodal Fusion with FAM
+
+  * **Clinical Workflow:** Designed specifically for low-contrast **IVC** images.
+  * **Alignment:** Uses deformable convolutions to align probability maps from SVC and DVC layers before fusing them with the IVC input.
+
 ## Setup
 Project Clone to Local
 ```
@@ -40,3 +60,17 @@ python --dataset=rose-svc
 --mode=test
 --first_suffix=best_fusion.pth
 ```
+## 📝 Citation
+
+If you find this work useful for your research, please cite our paper:
+
+```bibtex
+@article{shang2024ddunet,
+  title={DDU-Net: Learning Complex Vascular Topologies with KAN-Swin Transformers and Double Dynamic Upsampler},
+  author={Shang, Zhenhong and Li, Jun},
+  journal={Physics in Medicine & Biology (Under Review)},
+  year={2025}
+}
+## 🤝 Acknowledgements
+
+We thank the authors of the **ROSE-1**, **Prevent**, and **OCTA500** datasets for making their data publicly available. We also acknowledge the official implementation of **Efficient-KAN** which inspired our encoder design.

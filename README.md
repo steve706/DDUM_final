@@ -4,9 +4,10 @@ This project employs deep learning techniques to segment complex vascular topolo
 
 We propose the KAN-Swin Transformer, an encoder block that replaces this rigid component with an adaptive operator based on Kolmogorov-Arnold Networks (KANs). This new layer features B-spline-based learnable activation functions on network edges, rather than fixed functions on nodes, empowering the encoder to learn geometrically-aware representations specific to intricate morphologies like bifurcations and high-tortuosity segments. The decoder features a novel dual-path Double Dynamic Upsampler Module (DDUM), which processes edge-rich shallow features and semantic deep features in parallel before an attention-based fusion, avoiding feature contamination. An Information Compensation Module (ICM) further recovers fine details using multi-dilation convolutions. For challenging low-contrast Inner Vascular Complex (IVC) images, we introduce a multimodal fusion strategy, where a Feature Alignment Module (FAM) aligns probability maps from auxiliary modalities to enhance the IVC representation.
 
-**Title of the Article**: [DDU-Net: Learning Complex Vascular Topologies with  KAN-Swin Transformers and Double Dynamic Upsampler]
 
-![image](https://github.com/steve706/DDUM_final/blob/main/image.png)
+
+**Title of the Article**: [DDU-Net: Learning Complex Vascular Topologies with  KAN-Swin Transformers and Double Dynamic Upsampler]
+![image](https://github.com/steve706/DDUM_final/blob/main/visualize_1.png)
 
 ## 🏆 Key Innovations
 

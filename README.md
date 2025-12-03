@@ -7,7 +7,7 @@ We propose the KAN-Swin Transformer, an encoder block that replaces this rigid c
 
 
 **Title of the Article**: [DDU-Net: Learning Complex Vascular Topologies with  KAN-Swin Transformers and Double Dynamic Upsampler]
-![image](https://github.com/steve706/DDUM_final/blob/main/visualize_1.png)
+![image](https://github.com/steve706/DDUM_final/blob/main/visualization.jpg)
 
 ## 🏆 Key Innovations
 
